@@ -1,15 +1,12 @@
 {
-  "name": "NEVKO-UI",
-  "version": "0.9.900",
-  "description": "Refresh Design for Steam.",
-  "author": "dotFelixan",
+  "name": "KAT-UI",
+  "version": "0.0.1",
+  "description": "Refreshed Design for Steam. Based on dotFelixan's NEVKO-UI, with more features, while keeping the fresh design, now across the whole store and client interface.",
+  "author": "Beto1807",
 
   "github": {
-    "owner": "dotFelixan",
-    "repo_name": "NEVKO-UI"
-  },
-  "discord_support": {
-    "inviteCodeExcludingLink": "UuAQWZ9HxE"
+    "owner": "Beto1807",
+    "repo_name": "KAT-UI"
   },
 
   "header_image": "https://i.imgur.com/2aRCvrt.png",
