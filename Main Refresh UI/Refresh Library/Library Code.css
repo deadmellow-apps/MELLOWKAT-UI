@@ -93,6 +93,7 @@ div.ReactVirtualized__Grid__innerScrollContainer > div.Panel {
   padding-top: 0;
   padding-left: 0;
 }
+
 ._3x1HklzyDs4TEjACrRO2tB {
   padding: 4px;
   border-radius: 10px;
@@ -378,6 +379,13 @@ div.ReactVirtualized__Grid__innerScrollContainer > div.Panel {
 }
 ._2kzMb_F7UTOEdecAFftN-l svg.f6-7-5CWFxNqF2BycKWlb circle {
   stroke: var(--accent) !important;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ ._1vO6BoiVslZgs1kqDGdUs8 ._2-J2nMJ1zmDok8-jqXlf1e {
+    width: 0px !important;
+    height: 16px !important;
+    flex: 0 0 auto !important;
+    margin-right: -16px !important;
 }
 
 /*
