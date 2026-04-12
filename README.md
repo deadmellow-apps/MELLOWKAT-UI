@@ -1,29 +1,22 @@
-<p align="center">
-    <a href="https://github.com/dotFelixan/NEVKO-UI/">
-        <picture>
-          <img src="github/logo/newnevkologo.png?raw=true" alt="nevkouilogo" width="200">
-        </picture>
-    </a>
-</p>
-
 <div align="center">
 
-# NEVKO-UI
-### Theme for Millennium for Steam
+<img src="github\logo\newnevkologo.png?raw=true" alt="nevkouilogo" width="200">
 
-(Still Heavy WIP, Things may change.)
+# KAT-UI
 
-[Telegram](https://t.me/dotSProjects) | [Discord](https://dsc.gg/dotProjects)
+## Theme made for Millennium for Steam
 
-[Use this if Discord link don't work](https://discord.com/invite/mWtYwjcFZq)
+Based on dotFelixan's NEVKO-UI, meant to be a more deeply implemented theme, with more features, while still keeping the same *fresh* design as NEVKO-UI, now across the whole store and client interface.
 
- | Current Screenshot of Theme |
-| ------------------- | 
-| ![Refresh Design](https://github.com/dotFelixan/NEVKO-UI/blob/main/github/screenshots/stillaliveupdate.png?raw=true) |
+[WebPage](https://t.me/dotSProjects) | [Discord](https://dsc.gg/dotProjects)
+
+### Screenshots
+
+![Refresh Design](https://github.com/dotFelixan/NEVKO-UI/blob/main/github/screenshots/stillaliveupdate.png?raw=true)
 
 </div>
 
-## Current Features:
+## Current Features
 
 * Contributor Badges
 * "Custom" Rounding Avatars
@@ -38,26 +31,27 @@
 * Custom Background Color
 
 * Main:
-    * [Header] - Remove Window Buttons
-    * [Library] - Hiding Library Items
-    * [Library] - Library Side
-    * [Library] - Gamepage Side
-    * [Library] - Game Page Content Location
-    * [Misc] - Style Menu
+  * [Header] - Remove Window Buttons
+  * [Library] - Hiding Library Items
+  * [Library] - Library Side
+  * [Library] - Gamepage Side
+  * [Library] - Game Page Content Location
+  * [Misc] - Style Menu
 
 * Privacy:
-    * [Account Menu] - Blur Account Name
-    * [Account Menu] - Blur Balance
-    * [Account Button] - Hide Balance
+  * [Account Menu] - Blur Account Name
+  * [Account Menu] - Blur Balance
+  * [Account Button] - Hide Balance
 
- 
-## TODO LIST:
-### Low Priority -
+## TODO LIST
+
+### Low Priority
 
 Edit Later
 
-## CREDITS:
-### Authors from Who I Borrowed the Code:
+## CREDITS
+
+### Authors from Who I Borrowed the Code
 
 * [ShadowMonster99](https://github.com/shdwmtr) - [JS & CSS] Code from CompactHeader
 
@@ -67,11 +61,11 @@ Edit Later
 
 * [SpaceTheme](https://github.com/SpaceTheme) - [CSS] Code for Right Side GamePage from SpaceTheme
 
-### People Who Helped Me With the Code:
+### People Who Helped Me With the Code
 
 * [motionarium](https://github.com/motionarium) - Extra Buttons & Driver [JS]
 
-### Inspiration and Where Did I Get the Ideas From:
+### Inspiration and Where Did I Get the Ideas From
 
 * [Juxtopposed](https://youtu.be/cDY2p1CTkPo) - Future Store Ideas & etc.
 
