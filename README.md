@@ -1,7 +1,6 @@
 > **MELLOWKAT-UI patch notes (Nov 2026)**: fork of KAT-UI v0.0.2, updated for the latest Steam client.
 >
 > **Fixes**
-> - Top bar: Downloads / Add Game / Friends sit next to the notification bell again (previously drifted to the middle, and vanished when hovering the account avatar).
 > - Notification bell: no more blank box; now uses Steam's native animated bell with theme colours.
 > - Size on Disk plugin: shows a hard-drive icon instead of a clock.
 > - Game page: Play Time and Size on Disk icons are vertically centred.
@@ -14,6 +13,7 @@
 > **Changes**
 > - Store / Community / Market pages now use Steam's default styling (theme styles kept in `Webkit/` for later).
 > - Theme updates now come from this fork instead of upstream KAT-UI.
+> - Top bar: with "Move Bottom Buttons to Top Bar" on, Downloads / Add Game / Friends now sit in the centre of the top bar instead of next to the notification bell.
 >
 > **Cleanup & privacy**
 > - Removed debug/click-logging code and unused dev files.
