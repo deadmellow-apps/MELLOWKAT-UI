@@ -28,7 +28,7 @@
 
 ## Theme made for Millennium for Steam
 
-Based on dotFelixan's NEVKO-UI, meant to be a more deeply implemented theme, with more features, while still keeping the same *fresh* design as NEVKO-UI, now across the whole store and client interface.
+Based on dotFelixan's NEVKO-UI, meant to be a more deeply implemented theme, with more features, while still keeping the same *fresh* design as NEVKO-UI, now across the ~~whole store and~~ client interface.
 
 [WebPage](https://t.me/dotSProjects) | [Discord](https://dsc.gg/dotProjects)
 
