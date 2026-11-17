@@ -1,4 +1,4 @@
-> **MELLOWKAT-UI patch notes (Nov 2026)**: fork of KAT-UI v0.0.2, updated for the latest Steam client.
+> **MELLOWKAT-UI patch notes (Nov 2026)**: fork of KAT-UI v0.0.2, updated for the latest Steam client. AI assisted with this update, in addition to the borrowed code of the credited authors below. I don't like AI either, but the notification bell was driving me nuts.
 >
 > **Fixes**
 > - Notification bell: now uses Steam's native animated bell with theme colors.
