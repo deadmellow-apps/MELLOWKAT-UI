@@ -5,7 +5,7 @@
 > - Size on Disk plugin: shows a hard-drive icon instead of a clock.
 > - Game page: Play Time and Size on Disk icons are vertically centred.
 > - 100% achievements badge on library tiles updated for Steam's renamed class.
-> - Account Menu: extra buttons load reliably; fixed Chinese and Danish translations; no duplicate buttons after a language change.
+> - Account Menu: extra buttons load reliably; fixed Chinese and Danish translations; no duplicate buttons after a language change; Change Status submenu options show again (was empty apart from "Back").
 > - Settings section headers no longer sometimes show raw "DRIVER = 1" text.
 > - Avatar Decoration option no longer breaks other scripts in the main window.
 > - Menu Style now applies to the store menu window; SVG fix patch now actually loads.
