@@ -1,3 +1,25 @@
+> **MELLOWKAT-UI patch notes (Nov 2026)**: fork of KAT-UI v0.0.2, updated for the latest Steam client.
+>
+> **Fixes**
+> - Top bar: Downloads / Add Game / Friends sit next to the notification bell again (previously drifted to the middle, and vanished when hovering the account avatar).
+> - Notification bell: no more blank box; now uses Steam's native animated bell with theme colours.
+> - Size on Disk plugin: shows a hard-drive icon instead of a clock.
+> - Game page: Play Time and Size on Disk icons are vertically centred.
+> - 100% achievements badge on library tiles updated for Steam's renamed class.
+> - Account Menu: extra buttons load reliably; fixed Chinese and Danish translations; no duplicate buttons after a language change.
+> - Settings section headers no longer sometimes show raw "DRIVER = 1" text.
+> - Avatar Decoration option no longer breaks other scripts in the main window.
+> - Menu Style now applies to the store menu window; SVG fix patch now actually loads.
+>
+> **Changes**
+> - Store / Community / Market pages now use Steam's default styling (theme styles kept in `Webkit/` for later).
+> - Theme updates now come from this fork instead of upstream KAT-UI.
+>
+> **Cleanup & privacy**
+> - Removed debug/click-logging code and unused dev files.
+> - No more requests to outside servers for fonts or images; icon fonts are bundled.
+> - Removed broken or no-op options (Fonts, Refresh Settings) and empty scripts.
+
 <div align="center">
 
 <img src="github\logo\newnevkologo.png?raw=true" alt="nevkouilogo" width="200">
