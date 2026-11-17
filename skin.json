@@ -541,6 +541,10 @@
     {
       "MatchRegexString": ".*",
       "TargetCss": "Icons/Fluent/fluent.css"
+    },
+    {
+      "MatchRegexString": "^Steam$",
+      "TargetCss": "Plugins/sizeOnDisk.css"
     }
   ]
 }

@@ -1,3 +1,5 @@
+/* Size on Disk plugin: it reuses the Playtime stat block, which the theme
+   gives a timer glyph. Use the Fluent hard-drive glyph instead. */
 [data-size-on-disk] ._1tIg-QIrwMNtCm7NcYADyi._1GZdosVXnfrf69yU8DWASl::before {
     content: "\f0319" !important;
 }
