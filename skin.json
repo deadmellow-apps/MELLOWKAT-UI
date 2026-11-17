@@ -14,7 +14,6 @@
   "tags": ["Refresh", "Redesign", "Customizable", "Features", "Accents", "AMOLED", "WIP"],
 
   "UseDefaultPatches": true,
-  "Steam-WebKit": "Webkit/webkit.css",
   "RootColors": "Misc/Accents Code/root.css",
 
   "Conditions": {
