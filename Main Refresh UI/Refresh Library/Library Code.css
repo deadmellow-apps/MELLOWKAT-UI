@@ -735,9 +735,6 @@ div.NarrowRightPanel ._34lrt5-Fc3usZU6trA1P0- {
 ._1kiZKVbDe-9Ikootk57kpA ._1tIg-QIrwMNtCm7NcYADyi > svg {
   margin-top: -1.5px !important;
 }
-._1tIg-QIrwMNtCm7NcYADyi._1GZdosVXnfrf69yU8DWASl:has(+ ._3m_zjRTQBqcfzCjXLXUHcR > ._2TYVGoD27ZMfjRirKQNLfk) {
-    margin-top: 3px !important;
-}
 
 /* Font Sizes */
 ._34lrt5-Fc3usZU6trA1P0- {
@@ -763,9 +760,18 @@ div.NarrowRightPanel ._2TYVGoD27ZMfjRirKQNLfk {
 ._1bIMOmWaxKrMdVMWU21ku {
   padding-right: 0px;
 }
+/* Game stat icons (Play Time, Achievements, Size on Disk, ...): centre them
+   vertically against the two-line label. Steam's own margins are uneven
+   (1px top / 5px bottom), and the Fluent glyph is drawn as inline text, so
+   make the glyph a block with line-height 1 and centre the icon box. */
 ._1kiZKVbDe-9Ikootk57kpA ._1tIg-QIrwMNtCm7NcYADyi {
   margin-left: 0px;
-  margin-top: 1px;
+  margin-block: 0 !important;
+  align-self: center;
+}
+._1kiZKVbDe-9Ikootk57kpA ._1tIg-QIrwMNtCm7NcYADyi::before {
+  display: block;
+  line-height: 1;
 }
 
 /* Z-Index */
