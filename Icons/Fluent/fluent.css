@@ -170,6 +170,13 @@
 /* Alert, Userpannel */
 ._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf::before {
     content: "\f115" !important;
+    /* Steam now nests the bell SVG (Icon > BellSwing > svg), so the generic
+       `*>:has(> svg)` font rule no longer matches this button. Set it here. */
+    font-family: FluentSystemIcons-Filled !important;
+    font-style: normal;
+    font-weight: normal !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
     font-size: 16px;
     color: #67707b;
 }
@@ -180,8 +187,9 @@
 ._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf:hover::before {
     color: #fff;
 }
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf>svg {
-    display: none;
+._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf>svg,
+._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf>._34bQcTHo5QKzuujoEyU1tm {
+    display: none !important;
 }
 
 /* VR, Userpannel */

@@ -2,7 +2,8 @@
 ;(() => {
   const TITLE_BAR_SELECTOR = "._3cykd-VfN_xBxf3Qxriccm"
   const BOTTOM_BAR_SELECTOR = "._1_yS5UP7el0aN4vntx3dx"
-  const OFFSET_BASE = 121
+  // Gap (px) between the moved buttons and the first visible title bar button
+  const GAP = 5
 
   let currentTitleBar = null
   let currentBottomBar = null
@@ -10,13 +11,35 @@
   let bottomBarObserver = null
   let resizeObserver = null
 
+  // Left edge of the leftmost visible control inside the title bar.
+  // Steam keeps adding components to TitleBarControls (some render empty or
+  // hidden by the theme), so measuring the container's width plus a fixed
+  // window-button offset no longer lands next to the notification bell.
+  function leftmostVisibleEdge(container) {
+    let left = Infinity
+    for (const child of container.querySelectorAll(":scope > *, :scope > * > *")) {
+      const rect = child.getBoundingClientRect()
+      if (rect.width < 1 || rect.height < 1) continue
+      const style = getComputedStyle(child)
+      if (style.visibility === "hidden" || style.display === "none" || style.opacity === "0") continue
+      left = Math.min(left, rect.left)
+    }
+    return left === Infinity ? container.getBoundingClientRect().left : left
+  }
+
   function applyPosition() {
     if (!currentTitleBar || !currentBottomBar) return
 
-    const offsetWidth = currentTitleBar.offsetWidth
+    const parent = currentBottomBar.offsetParent || document.documentElement
+    const parentRight = parent.getBoundingClientRect().right
+    const right = Math.max(0, Math.round(parentRight - leftmostVisibleEdge(currentTitleBar) + GAP))
+
     currentBottomBar.style.setProperty("position", "absolute", "important")
     currentBottomBar.style.setProperty("left", "auto", "important")
-    currentBottomBar.style.setProperty("right", `${offsetWidth + OFFSET_BASE}px`, "important")
+    // Position is measured, so the per-option margin compensations
+    // (Main Window Buttons/*.css, Top Bar Reverse.css) must not stack on top.
+    currentBottomBar.style.setProperty("margin-right", "0", "important")
+    currentBottomBar.style.setProperty("right", `${right}px`, "important")
   }
 
   function cleanup() {
@@ -105,6 +128,7 @@
   }
 
   window.addEventListener("load", init)
+  window.addEventListener("resize", () => requestAnimationFrame(applyPosition))
 
   setInterval(init, 2000)
 })()
