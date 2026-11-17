@@ -5,8 +5,8 @@
   "author": "Beto1807",
 
   "github": {
-    "owner": "Beto1807",
-    "repo_name": "KAT-UI"
+    "owner": "deadmellow-apps",
+    "repo_name": "MELLOWKAT-UI"
   },
 
   "header_image": "https://i.imgur.com/2aRCvrt.png",
@@ -102,27 +102,6 @@
         "yes": {}
       }
     },
-    "Fonts [WIP]": {
-      "description": "Override the default Steam font with a custom typeface | BIG WIP, NOT WORK",
-      "default": "Steam Default",
-      "tab": "General",
-      "values": {
-        "Steam Default": {},
-        "Inter": {
-          "TargetCss": {
-            "affects": [".*"],
-            "src": "General/Fonts/Inter/Inter.css"
-          }
-        },
-        "VK Sans": {
-          "TargetCss": {
-            "affects": [".*"],
-            "src": "General/Fonts/VK Sans/VK Sans.css"
-          }
-        }
-      }
-    },
-
     "DRIVER = 3": {
       "description": "",
       "default": "",
@@ -427,13 +406,13 @@
         "Legacy": {},
         "Spacious": {
           "TargetCss": {
-            "affects": ["^Steam$", ".friendsui-container", "Supernav$", "Menu$"],
+            "affects": ["^Steam$", ".friendsui-container", "SuperNav$", "Menu$"],
             "src": "Main Refresh UI/Refresh Menu/Spacious.css"
           }
         },
         "Compact": {
           "TargetCss": {
-            "affects": ["^Steam$", ".friendsui-container", "Supernav$", "Menu$"],
+            "affects": ["^Steam$", ".friendsui-container", "SuperNav$", "Menu$"],
             "src": "Main Refresh UI/Refresh Menu/Compact.css"
           }
         }
@@ -500,11 +479,6 @@
       "TargetJs": "Misc/Category Settings Script/TitleCategory.js"
     },
     {
-      "MatchRegexString": "^Steam$",
-      "TargetJs": "Misc/Category Settings Script/TitleCategory.js"
-    },
-  
-    {
       "MatchRegexString": ".*",
       "TargetJs": "webkit.js"
     },
@@ -547,7 +521,7 @@
     },
     {
       "MatchRegexString": ".ModalDialogPopup",
-      "TargetCss": "Misc/Fix Millennium Stuff/SVGLocation.css"
+      "TargetCss": "Misc/Fix Millenium Stuff/SVGLocation.css"
     },
     {
       "MatchRegexString": "^Steam$",
@@ -565,26 +539,9 @@
       "MatchRegexString": "SuperNav$",
       "TargetCss": "Misc/OLD Accents Code/Main Steam Elements.css"
     },
-	
     {
       "MatchRegexString": ".*",
-      "TargetJs": "Misc/Auto Detect Light/LightorDark.js"
-    },
-    {
-      "MatchRegexString": "^Steam$",
-      "TargetJs": "Misc/Right Click Swap Steam/SteamButtons.js"
-    },
-    {
-      "MatchRegexString": ".*",
-      "TargetJs": "General/Rounding Avatars/Custom Avatar Roundness Script.js"
-    },
-    {
-            "MatchRegexString": ".*",
-            "TargetCss": "Icons/fluent/fluent.css"
-    },
-    {
-      "MatchRegexString": "^Steam$",
-      "TargetJs": "General/Rounding Avatars/Custom Avatar Roundness Script.js"
+      "TargetCss": "Icons/Fluent/fluent.css"
     }
   ]
 }

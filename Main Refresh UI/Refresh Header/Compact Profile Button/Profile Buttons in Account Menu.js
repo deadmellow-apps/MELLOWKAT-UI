@@ -1,3 +1,5 @@
+;(() => {
+// KAT-UI: scoped so its top-level names cannot clash with other injected scripts
 // ==============================================================================
 // Steam Profile Menu Enhancement Script
 // ==============================================================================
@@ -623,3 +625,4 @@ class SteamProfileEnhancer {
 
 // Запуск / Start
 new SteamProfileEnhancer()
+})()

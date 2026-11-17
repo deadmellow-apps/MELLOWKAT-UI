@@ -1,16 +1,3 @@
-/* @font-face {
-    font-family: "FluentSystemIcons-Filled";
-    src: url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Filled.woff2") format("woff2"),
-    url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Filled.woff") format("woff"),
-    url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Filled.ttf") format("truetype");
-}
-@font-face {
-    font-family: "FluentSystemIcons-Regular";
-    src: url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Regular.woff2") format("woff2"),
-    url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Regular.woff") format("woff"),
-    url("https://spacetheme.net/themes/_fonts/FluentSystemIcons-Regular.ttf") format("truetype");
-} */
-
 @font-face {
     font-family: "FluentSystemIcons-Filled";
     src: url("./_font/FluentSystemIcons-Filled.woff2") format("woff2"),
@@ -408,20 +395,20 @@
 
 
 /* 100% complete, libhome */
-._1LJqx_qFOC8199RBQO5kU8._31wTtQjCH2ZSKgMiMZLhAM {
+._1LJqx_qFOC8199RBQO5kU8._1fddiVOLgn9nNxAEDjyV4k {
     padding: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-._1LJqx_qFOC8199RBQO5kU8._31wTtQjCH2ZSKgMiMZLhAM::before {
+._1LJqx_qFOC8199RBQO5kU8._1fddiVOLgn9nNxAEDjyV4k::before {
     position: absolute;
     left: -16px;
     content: "\f84f" !important;
     font-size: 36px;
     color: rgb(var(--st-yellow));
 }
-._1LJqx_qFOC8199RBQO5kU8._31wTtQjCH2ZSKgMiMZLhAM>svg {
+._1LJqx_qFOC8199RBQO5kU8._1fddiVOLgn9nNxAEDjyV4k>svg {
     display: none;
 }
 

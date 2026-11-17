@@ -1,3 +1,5 @@
+;(() => {
+// KAT-UI: scoped so its top-level names cannot clash with other injected scripts
 // ==============================================================================
 // НАСТРОЙКИ / SETTINGS
 // Здесь вы можете легко изменить текст замены и стили
@@ -58,7 +60,7 @@ const CONFIG = {
 
   // Создаем регулярные выражения из настроек
   const replacements = Object.entries(CONFIG.replacements).map(([search, replace]) => ({
-    pattern: new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s*"), "g"),
+    pattern: new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s*")),
     replacement: replace,
   }))
 
@@ -146,4 +148,5 @@ const CONFIG = {
   }
 
   init()
+})()
 })()
