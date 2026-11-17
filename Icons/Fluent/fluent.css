@@ -154,30 +154,8 @@
     display: none;
 }
 
-/* Alert, Userpannel */
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf::before {
-    content: "\f115" !important;
-    /* Steam now nests the bell SVG (Icon > BellSwing > svg), so the generic
-       `*>:has(> svg)` font rule no longer matches this button. Set it here. */
-    font-family: FluentSystemIcons-Filled !important;
-    font-style: normal;
-    font-weight: normal !important;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-    color: #67707b;
-}
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd::before {
-    content: "\f11b" !important;
-    color: rgb(var(--st-accent-1));
-}
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf:hover::before {
-    color: #fff;
-}
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf>svg,
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf>._34bQcTHo5QKzuujoEyU1tm {
-    display: none !important;
-}
+/* Alert, Userpannel: uses Steam's native animated bell; colours live in
+   Main Refresh UI/Refresh Header/Header Code.css ("Notification Bell"). */
 
 /* VR, Userpannel */
 ._2Szzh5sKyGgnLUR870zbDE._3lRfTo8Wo3phXfE1DvK6QW::before {

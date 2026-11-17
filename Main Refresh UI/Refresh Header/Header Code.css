@@ -361,6 +361,18 @@
     border-radius: 3px;
 }
 
+/* Notification Bell: Steam's native animated bell (Icon > BellSwing > svg).
+   It is drawn in currentColor, so only the colour is themed here; Steam's
+   own swing animation on new notifications is kept. */
+.RtSv39ZoBOySnb8XQ5hJf ._34bQcTHo5QKzuujoEyU1tm {
+    color: #67707b !important;
+    transition: color .15s ease-out;
+}
+.RtSv39ZoBOySnb8XQ5hJf:not(._1QQWjaXmb1eTHZpeIhQA_5):hover ._34bQcTHo5QKzuujoEyU1tm,
+.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd ._34bQcTHo5QKzuujoEyU1tm {
+    color: #fff !important;
+}
+
 /* Fix Notification */
 .RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd {
     background-color: var(--green-color);
