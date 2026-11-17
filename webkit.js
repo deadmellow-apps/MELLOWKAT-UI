@@ -1,3 +1,5 @@
+;(() => {
+// KAT-UI: scoped so its top-level names cannot clash with other injected scripts
 // ============================================================================
 // STYLES
 // ============================================================================
@@ -93,3 +95,4 @@ if (document.readyState === "loading") {
 } else {
   init()
 }
+})()

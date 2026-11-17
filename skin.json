@@ -247,10 +247,7 @@
       "default": "Left Side",
       "tab": "UI Personalization",
       "values": {
-        "Left Side": {
-          "affects": ["^Steam$"],
-          "src": "Main Refresh UI/Refresh Library/Flip Sides/Fix Button Flip Gamepage.css"
-        },
+        "Left Side": {},
         "Right Side": {
           "TargetCss": {
             "affects": ["^Steam$"],
@@ -415,16 +412,6 @@
             "src": "Main Refresh UI/Refresh Menu/Compact.css"
           }
         }
-      }
-    },
-
-    "Refresh Settings": {
-      "description": "Enable experimental redesigned settings interface | BIG WIP",
-      "default": "Disabled",
-      "tab": "Refresh Presets",
-      "values": {
-        "Disabled": {},
-        "Enabled": {}
       }
     },
 

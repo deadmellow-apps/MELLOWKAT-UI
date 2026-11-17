@@ -1,35 +1,39 @@
-// Оптимизированный скрипт с debounce
-const selectorsConfig = [
-  { selector: '.X_mJE4BYV5StDPwZhSiAu.avatarFrame', classes: ['X_mJE4BYV5StDPwZhSiAu', 'avatarFrame'] },
-  { selector: '._3fM0F85j3aWVzr4RJM9-eu', classes: ['_3fM0F85j3aWVzr4RJM9-eu'] },
-  { selector: '._2nPONxDUmK4rQXzK4Y3vG2', classes: ['_2nPONxDUmK4rQXzK4Y3vG2'] }
-];
+// Hide avatar decorations (frames). Scoped in an IIFE so its names cannot
+// clash with other scripts injected into the same window.
+;(() => {
+  const selectorsConfig = [
+    { selector: ".X_mJE4BYV5StDPwZhSiAu.avatarFrame", classes: ["X_mJE4BYV5StDPwZhSiAu", "avatarFrame"] },
+    { selector: "._3fM0F85j3aWVzr4RJM9-eu", classes: ["_3fM0F85j3aWVzr4RJM9-eu"] },
+    { selector: "._2nPONxDUmK4rQXzK4Y3vG2", classes: ["_2nPONxDUmK4rQXzK4Y3vG2"] },
+  ]
 
-let timeout;
+  let timeout
 
-function cleanUp() {
-  // Отключаем observer на время очистки
-  observer.disconnect();
-  
-  selectorsConfig.forEach(({ selector, classes }) => {
-    document.querySelectorAll(selector).forEach(el => {
-      // Удаляем ВСЕ img внутри
-      el.querySelectorAll('img').forEach(img => img.remove());
-      // Удаляем классы
-      el.classList.remove(...classes);
-    });
-  });
-  
-  // Включаем observer обратно
-  observer.observe(document.body, { childList: true, subtree: true });
-}
+  function cleanUp() {
+    // Pause the observer while we edit the DOM so we don't retrigger ourselves
+    observer.disconnect()
 
-function debouncedCleanUp() {
-  clearTimeout(timeout);
-  timeout = setTimeout(cleanUp, 10);
-}
+    selectorsConfig.forEach(({ selector, classes }) => {
+      document.querySelectorAll(selector).forEach((el) => {
+        el.querySelectorAll("img").forEach((img) => img.remove())
+        el.classList.remove(...classes)
+      })
+    })
 
-const observer = new MutationObserver(debouncedCleanUp);
+    observer.observe(document.body, { childList: true, subtree: true })
+  }
 
-// Первый запуск
-cleanUp();
+  function debouncedCleanUp() {
+    clearTimeout(timeout)
+    timeout = setTimeout(cleanUp, 10)
+  }
+
+  const observer = new MutationObserver(debouncedCleanUp)
+
+  // The script can be injected before <body> exists
+  if (document.body) {
+    cleanUp()
+  } else {
+    document.addEventListener("DOMContentLoaded", cleanUp, { once: true })
+  }
+})()

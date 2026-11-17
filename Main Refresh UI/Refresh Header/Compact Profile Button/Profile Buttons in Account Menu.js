@@ -267,7 +267,7 @@ const TRANSLATIONS = {
     friends: "Venner",
     changeStatus: "Skift status",
     back: "Tilbage",
-    online: "Paikalla",
+    online: "Online",
     away: "Væk",
     invisible: "Usynlig",
     offline: "Offline",
@@ -407,7 +407,12 @@ class SteamProfileEnhancer {
       document.querySelector('meta[name="language"]')?.content ||
       navigator.language ||
       "en"
-    return lang.split("-")[0].toLowerCase()
+    // Keep region-specific keys (zh-CN / zh-TW); fall back to the base language
+    const [base, region] = lang.split(/[-_]/)
+    const full = region ? `${base.toLowerCase()}-${region.toUpperCase()}` : base.toLowerCase()
+    if (TRANSLATIONS[full]) return full
+    if (base.toLowerCase() === "zh") return "zh-CN"
+    return base.toLowerCase()
   }
 
   // Получение перевода / Get translation
@@ -432,6 +437,9 @@ class SteamProfileEnhancer {
 
   // Удаление дубликатов / Remove duplicates
   removeDuplicates() {
+    // Remove everything this script inserted before (so a language change
+    // does not add a second set), plus Steam's own "View my profile" item.
+    document.querySelectorAll("[data-kat-added]").forEach((el) => el.remove())
     const profileTexts = new Set(Object.values(TRANSLATIONS).map((l) => l.myProfile))
     document.querySelectorAll(CONFIG.selectors.buttonClass).forEach((btn) => {
       if (profileTexts.has(btn.textContent?.trim())) btn.remove()
@@ -573,6 +581,7 @@ class SteamProfileEnhancer {
 
     order.forEach((key) => {
       if (buttons[key]) {
+        buttons[key].setAttribute("data-kat-added", "")
         mainContainer.insertBefore(buttons[key], mainContainer.firstElementChild)
       }
     })
