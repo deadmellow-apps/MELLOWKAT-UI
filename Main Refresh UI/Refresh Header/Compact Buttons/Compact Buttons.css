@@ -31,18 +31,10 @@
     gap: 5px !important;
     flex: 0 !important;
 }
-/* Centre Steam's update popup. Steam's first child here (the updater) now
-   usually renders nothing, which made the button row itself the first div,
-   so it got pinned to the middle of the window. Never apply this to the
-   button row (BottomBar). */
-._1_yS5UP7el0aN4vntx3dx > div:first-of-type:not(._3vCzSrrXZzZjVJFZNg9SGu) {
+._1_yS5UP7el0aN4vntx3dx > div:first-of-type {
 	transform: translateX(-50%);
     position: fixed;
     width: 700px;
-}
-._1_yS5UP7el0aN4vntx3dx > ._3vCzSrrXZzZjVJFZNg9SGu {
-    position: relative !important;
-    transform: none !important;
 }
 ._1_yS5UP7el0aN4vntx3dx {
     padding: 0 !important;
