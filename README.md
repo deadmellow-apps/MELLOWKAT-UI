@@ -19,6 +19,13 @@
 > - Removed debug/click-logging code and unused dev files.
 > - No more requests to outside servers for fonts or images; icon fonts are bundled.
 > - Removed broken or no-op options (Fonts, Refresh Settings) and empty scripts.
+>
+> **Credits for code touched in this update**
+> - Base theme: [KAT-UI](https://github.com/Beto1807/KAT-UI) by Beto1807, based on [NEVKO-UI](https://github.com/dotFelixan/NEVKO-UI) by dotFelixan.
+> - Top-bar Compact Buttons (CSS & JS): from "Simply Dark" / CompactHeader by [ShadowMonster99 (shdwmtr)](https://github.com/shdwmtr).
+> - Account Menu extra buttons (JS): by [motionarium](https://github.com/motionarium).
+> - Icons, including the new Size on Disk hard-drive icon: [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) by Microsoft (MIT License, see `Icons/Fluent/_font/LICENSE-3rdParty.md`).
+> - Full credits for the original theme are in the Credits section below.
 
 <div align="center">
 

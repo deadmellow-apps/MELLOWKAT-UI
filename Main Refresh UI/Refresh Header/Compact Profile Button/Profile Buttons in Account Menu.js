@@ -527,6 +527,9 @@ class SteamProfileEnhancer {
 
     const statusBtns = statuses.map(({ key, url }) => {
       const btn = this.elements.templateButton.cloneNode(true)
+      // The template is one of the menu items hidden above, so the clone
+      // inherits its inline display:none; clear it or the options are invisible.
+      btn.style.display = ""
       btn.textContent = this.t(key)
       btn.classList.add("steam-status-option")
       btn.addEventListener("click", (e) => {
