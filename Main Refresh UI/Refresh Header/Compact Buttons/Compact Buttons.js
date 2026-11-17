@@ -15,24 +15,33 @@
   // Steam keeps adding components to TitleBarControls (some render empty or
   // hidden by the theme), so measuring the container's width plus a fixed
   // window-button offset no longer lands next to the notification bell.
+  // Only the bar's own in-flow buttons count. Hover tooltips/popups that
+  // Steam mounts inside the bar are absolutely/fixed positioned (often
+  // off-screen while measuring) and must be ignored, or the moved buttons
+  // get pushed off-screen whenever you hover e.g. the account avatar.
   function leftmostVisibleEdge(container) {
+    const box = container.getBoundingClientRect()
     let left = Infinity
-    for (const child of container.querySelectorAll(":scope > *, :scope > * > *")) {
+    for (const child of container.children) {
+      const style = getComputedStyle(child)
+      if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") continue
+      if (style.position === "absolute" || style.position === "fixed") continue
       const rect = child.getBoundingClientRect()
       if (rect.width < 1 || rect.height < 1) continue
-      const style = getComputedStyle(child)
-      if (style.visibility === "hidden" || style.display === "none" || style.opacity === "0") continue
+      if (rect.left < box.left - 1 || rect.right > box.right + 1) continue
       left = Math.min(left, rect.left)
     }
-    return left === Infinity ? container.getBoundingClientRect().left : left
+    return left === Infinity ? box.left : left
   }
 
   function applyPosition() {
     if (!currentTitleBar || !currentBottomBar) return
 
     const parent = currentBottomBar.offsetParent || document.documentElement
-    const parentRight = parent.getBoundingClientRect().right
-    const right = Math.max(0, Math.round(parentRight - leftmostVisibleEdge(currentTitleBar) + GAP))
+    const parentBox = parent.getBoundingClientRect()
+    // Never push the buttons past the left edge of the window
+    const maxRight = Math.max(0, parentBox.width - currentBottomBar.offsetWidth)
+    const right = Math.min(maxRight, Math.max(0, Math.round(parentBox.right - leftmostVisibleEdge(currentTitleBar) + GAP)))
 
     currentBottomBar.style.setProperty("position", "absolute", "important")
     currentBottomBar.style.setProperty("left", "auto", "important")
